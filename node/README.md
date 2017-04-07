@@ -18,7 +18,8 @@ then npm will install all modules.
 
 * Run the follow code
 
-`node/node Arduino.js` 
+`node/node blink.js` 
+
 
 
 # License
