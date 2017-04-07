@@ -2,7 +2,7 @@
 The purpose of this project is remote control from AT commands using serial comunication. AT commands have been used by different hardware companies, and is easy to use.
 # Getting Started
 Clone this project
-`git clone `
+`git clone https://github.com/brakdag/Arduino-AT-Command-Control.git`
 
 * Download the latest version of the arduino ide, from the official page,
 * Open Arduino IDE.
