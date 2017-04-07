@@ -1,18 +1,26 @@
+/* this program emulates classic blink app
+made by Gustavo David Ferreyra 
+MIT license
+*/
 
 var SerialPort = require('serialport');
 
-var port = new SerialPort('/dev/ttyACM0');
+var port = new SerialPort('COM3'); // in linux use SerialPort('/dev/ttyACMO');
  
-port.on('open', function() {
-  port.write('', function(err) {
-    if (err) {
-      return console.log('Error on write: ', err.message);
-    }
-    console.log('message written');
-  });
-});
- 
-// open errors will be emitted as an error event 
-port.on('error', function(err) {
-  console.log('Error: ', err.message);
-})
+var status = 'apagado';
+
+
+function split(){
+	if (status == 'apagado') 
+	{
+		port.write('ATDOH+13\r\n');
+		status = 'encendido';
+	}
+	else if (status == 'encendido')
+	{
+		port.write('ATDOL+13\r\n');
+		status = 'apagado';
+	}
+}
+
+setInterval(split,1000);
