@@ -12,11 +12,23 @@ AT
 String inputString = "";         // a string to hold incoming data
 boolean stringComplete = false;  // whether the string is complete
 
+// RESET PUT ALL OUTPUT IN LOW AND GOTO START CODE.
+void reset(){
+  
+  for(int i=0; i<=13 ; i++)   
+  {
+    pinMode(i,OUTPUT);
+    digitalWrite(i,LOW); 
+  }
+  asm volatile ("  jmp 0");
+}
 void setup() {
   // initialize serial:
   Serial.begin(9600);
   // reserve 200 bytes for the inputString:
+  
   inputString.reserve(200);
+  Serial.println("# Arduino AT command Control 1.0. RUNNING #");
 }
 
 void loop() {
@@ -38,9 +50,47 @@ void command_listener()
     Serial.println( buf );
     Serial.println("OK");
     }
+  if (inputString.substring(0,6)=="ATDOH+"){
+    String strPin =  inputString.substring(6);
+    pinMode(strPin.toInt(),OUTPUT);
+    digitalWrite(strPin.toInt(),HIGH);
+    Serial.println("OK");
+    }
+  if (inputString.substring(0,6)=="ATDOL+"){
+    String strPin =  inputString.substring(6);
+    pinMode(strPin.toInt(),OUTPUT);
+    digitalWrite(strPin.toInt(),LOW);
+    Serial.println("OK");
+    }
   
-  
+  if (inputString.substring(0,6)=="ATDIN+"){
+    String strPin =  inputString.substring(6);
+    pinMode(strPin.toInt(),INPUT);
+    Serial.println(digitalRead(strPin.toInt()));
+    Serial.println("OK");
+    }
+      
+  if (inputString.substring(0,6)=="ATDIP+"){
+    String strPin =  inputString.substring(6);
+    pinMode(strPin.toInt(),INPUT_PULLUP);
+    Serial.println(digitalRead(strPin.toInt()));
+    Serial.println("OK");
+    }
+      
+  if (inputString.substring(0,6)=="ATAI+"){
+    String strPin =  inputString.substring(5);
+    Serial.println(analogRead(strPin.toInt()));
+    Serial.println("OK");
+    } 
+      
+  if (inputString=="AT+RESET\r\n"){
+    reset();
+    Serial.println("OK");
+    }   
+ 
 }
+
+
     
 void serialEvent() {
   while (Serial.available()) {
