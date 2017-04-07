@@ -20,10 +20,10 @@ Now you just have to write the commands and see how it works. It's very simple.
 | `AT` | Check status comunication. | `OK` |
 | `AT+RESET` | Restart Arduino. | `OK` 
 | `AT+CCLK` | Get time in milliseconds after Arduino start. | value |
-| `ATDOH+<PIN>`| Write in HIGH in digital output. | `OK` |
-| `ATDOL+<PIN>`| Write in LOW in digital output. | `OK` |
-| `ATDIN+<PIN>`| Read digital input. | value |
-| `ATDIP+<PIN>`| Read digital input with internal pullup resistor. {0,1}| value |
+| `ATDOH+<PIN>`| Set pin to HIGH. | `OK` |
+| `ATDOL+<PIN>`| Set pin to LOW. | `OK` |
+| `ATDIN+<PIN>`| Read pin digital input. | value |
+| `ATDIP+<PIN>`| Read pin digital input with internal pull up resistor. | value |
 | `ATAI+<PIN>`| Read analog input. | value |
 
 # Examples
