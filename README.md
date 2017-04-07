@@ -5,8 +5,7 @@ Clone this project
 `git clone https://github.com/brakdag/Arduino-AT-Command-Control.git`
 
 * Download the latest version of the arduino ide, from the official page,
-* Open Arduino IDE.
-* Open the file `arduino.at.firmware.ino`.
+* Open in Arduino IDE the file in `/src/arduino.at.firmware.ino`.
 * Connect the Arduino, compile and upload.
 * Open Serial Monitor, change to `Both LN & CR` and `9600baud`
 
