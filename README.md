@@ -39,10 +39,10 @@ ATDOL+13 //change status pin 13 to LOW
 
 # Example with Nodejs
 Install `nodejs` and `npm` then run the follow code.
+
 ```shell
-cd /node/
 npm install
-node blink.js
+node node/blink.js
 ```
 # License
 
