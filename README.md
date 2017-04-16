@@ -1,5 +1,5 @@
 # Arduino AT Command Control
-[![Build Status](https://travis-ci.org/brakdag/Arduino-AT-Command-Control.svg?branch=master)](https://travis-ci.org/brakdag/Arduino-AT-Command-Control)   [![dependencies](https://david-dm.org/brakdag/Arduino-AT-Command-Control.svg?theme=shields.io)](https:///brakdag/Arduino-AT-Command-Control)   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)   [![Analytics](https://ga-beacon.appspot.com/UA-42105589-4/ArduinoATCommandControl/visita)](https://github.com/brakdag/Arduino-AT-Command-Control)
+[![Build Status](https://travis-ci.org/brakdag/Arduino-AT-Command-Control.svg?branch=master)](https://travis-ci.org/brakdag/Arduino-AT-Command-Control)   [![dependencies](https://david-dm.org/brakdag/Arduino-AT-Command-Control.svg?theme=shields.io)](https:///brakdag/Arduino-AT-Command-Control)   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)   [![Analytics](https://ga-beacon.appspot.com/UA-42105589-4/ArduinoATCommandControl/visita)](https://github.com/igrigorik/ga-beacon)
 
 
 The purpose of this project is remote control from AT commands using serial comunication. AT commands have been used by different hardware companies, and it's easy to use.
