@@ -1,4 +1,6 @@
 # Arduino AT Command Control
+[![Build Status](https://travis-ci.org/brakdag/Arduino-AT-Command-Control.svg?branch=master)](https://travis-ci.org/brakdag/Arduino-AT-Command-Control)
+
 The purpose of this project is remote control from AT commands using serial comunication. AT commands have been used by different hardware companies, and it's easy to use.
 # Getting Started
 Clone this project
