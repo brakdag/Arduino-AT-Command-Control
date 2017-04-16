@@ -2,7 +2,7 @@
   "name": "arduino",
   "version": "1.0.0",
   "description": "test arduino serial",
-  "main": "blink.js",
+  "main": "./test/blink.js",
   "scripts": {
     "test": "mocha --check-leaks"
   },
