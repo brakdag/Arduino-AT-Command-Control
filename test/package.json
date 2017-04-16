@@ -4,7 +4,7 @@
   "description": "test arduino serial",
   "main": "blink.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --check-leaks"
   },
   "keywords": [
     "arduino",
@@ -14,6 +14,7 @@
   "author": "Gustavo Ferreyra",
   "license": "MIT",
   "dependencies": {
-    "serialport": "^4.0.7"
+    "serialport": "^4.0.7",
+     "mocha": "^3.2.0"
   }
 }
